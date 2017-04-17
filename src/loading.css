@@ -1,0 +1,72 @@
+.cancel {
+    position: absolute;
+    top: 96px;
+    left: 170px;
+    text-decoration: none;
+    color: rgb(50, 129, 235);
+}
+
+.pswp__preloader__icn {
+    opacity:0.75;
+    width: 144px;
+    height: 144px;
+    -webkit-animation: clockwise 1000ms linear infinite;
+    animation: clockwise 1000ms linear infinite;
+}
+
+.pswp__preloader__cut {
+    position: relative;
+    width: 72px;
+    height: 144px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pswp__preloader__donut {
+    box-sizing: border-box;
+    width: 144px;
+    height: 144px;
+    border: 14px solid #000;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    margin:0;
+    -webkit-animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+    animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+    -webkit-animation: color-ring 6000ms infinite;
+    animation: color-ring 6000ms infinite;
+}
+
+@-webkit-keyframes clockwise {
+    0% { -webkit-transform: rotate(0deg) }
+    100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes clockwise {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+@-webkit-keyframes donut-rotate {
+    0% { -webkit-transform: rotate(0) }
+    50% { -webkit-transform: rotate(-140deg) }
+    100% { -webkit-transform: rotate(0) }
+}
+@keyframes donut-rotate {
+    0% { transform: rotate(0) }
+    50% { transform: rotate(-140deg) }
+    100% { transform: rotate(0) }
+}
+
+@keyframes color-ring {
+    0% {border-color: rgb(236, 65, 55);}
+    20% {border-color: rgb(230, 220, 30);}
+    40% {border-color: rgb(27, 233, 27);}
+    60% {border-color: rgb(50, 129, 235);}
+    80% {border-color: rgb(188, 52, 233);}
+    100% {border-color: rgb(236, 65, 55);}
+}
